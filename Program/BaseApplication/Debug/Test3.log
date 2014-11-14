@@ -1,0 +1,24 @@
+﻿Build started 12-11-2014 16:23:36.
+     1>Project "C:\Users\Dennis\Dropbox\School\Wroclaw\Software engineering\TestOrge\Test5 Tutorial 5\Test3\Test3.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\OgreSDK_vc11_v1-9-0\include" /I"C:\OgreSDK_vc11_v1-9-0\include\OIS" /I"C:\OgreSDK_vc11_v1-9-0\include\OGRE" /I"C:\OgreSDK_vc11_v1-9-0\Samples\Common\include" /I"C:\OgreSDK_vc11_v1-9-0\boost" /I"C:\OgreSDK_vc11_v1-9-0\include\OGRE\Overlay" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt BaseApplication.cpp TutorialApplication.cpp
+         TutorialApplication.cpp
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.h(30): error C2146: syntax error : missing ';' before identifier 'mRotate'
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.h(31): error C2146: syntax error : missing ';' before identifier 'mMove'
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.h(33): error C2143: syntax error : missing ';' before '*'
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.h(33): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.h(35): error C2146: syntax error : missing ';' before identifier 'mDirection'
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.h(35): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.h(39): error C2535: 'void TutorialApplication::createScene(void)' : member function already defined or declared
+                 c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.h(38) : see declaration of 'TutorialApplication::createScene'
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\tutorialapplication.cpp(69): warning C4305: '=' : truncation from 'double' to 'Ogre::Real'
+         BaseApplication.cpp
+     1>c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\baseapplication.cpp : fatal error C1033: cannot open program database 'c:\users\dennis\dropbox\school\wroclaw\software engineering\testorge\test5 tutorial 5\test3\debug\vc110.pdb'
+         Generating Code...
+     1>Done Building Project "C:\Users\Dennis\Dropbox\School\Wroclaw\Software engineering\TestOrge\Test5 Tutorial 5\Test3\Test3.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:24.19
