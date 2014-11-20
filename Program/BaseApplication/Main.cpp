@@ -1,3 +1,15 @@
+/*
+Created by Dennis Mark for the subject software engineering.
+For the documentation only this functions are importand:
+
+
+The other functions aren't important for the documentation at this moment
+	- frameRenderingQueued
+	- createScene
+	- createCamera
+	- createViewports
+*/
+
 #include "Main.h"
  
 //-------------------------------------------------------------------------------------
@@ -21,7 +33,7 @@ bool Main::go(void)
 {
 	return setup();
 }
-
+	//This function is the frame listner, this handles the keyboard and mouse
 	bool Main::frameRenderingQueued(const Ogre::FrameEvent& evt)
 	{
 		//Static variables 
@@ -37,6 +49,7 @@ bool Main::go(void)
 		mKeyboard->capture();
 		mMouse->capture();
  
+		// Check if the esc key is pressed
 		if(mKeyboard->isKeyDown(OIS::KC_ESCAPE))
 			return false;
  
@@ -95,10 +108,9 @@ bool Main::go(void)
 			mMove = 250;
 			mRotate = 0.13;
 		}
+		// Translate the results to the scenenode
 		mSceneMgr->getSceneNode("PenguinNode")->translate(transVector * evt.timeSinceLastFrame, Ogre::Node::TS_LOCAL);
 		
-
-
 		return true;
 	}
 
@@ -184,7 +196,6 @@ void Main::loadConfig(void)
 		}
 	}
 }
-
 bool Main::generateRenderWindow(void)
 {
 		//Render window
@@ -204,6 +215,7 @@ bool Main::generateRenderWindow(void)
 		return true;
 }
 
+// Chreate the scene manager and the scenes
 void Main::createScene(void)
 {
 		// Create the SceneManager, in this case a generic one
@@ -255,10 +267,7 @@ void Main::createCamera(void)
 {
 		// Create the camera
 		mCamera = mSceneMgr->createCamera("PlayerCam");
- 
-		// Position it at 80 in Z direction
 		mCamera->setPosition(Ogre::Vector3(200,200,200));
-		// Look back along -Z
 		mCamera->lookAt(Ogre::Vector3(0,0,0));
 		mCamera->setNearClipDistance(5);
 }
@@ -272,6 +281,8 @@ void Main::createViewports(void)
 		mCamera->setAspectRatio(
 		Ogre::Real(vp->getActualWidth()) / Ogre::Real(vp->getActualHeight()));
 }
+
+// Start the OIS
 void Main::startOIS(void)
 {
 		Ogre::LogManager::getSingletonPtr()->logMessage("*** Initializing OIS ***");
@@ -288,7 +299,6 @@ void Main::startOIS(void)
 		mKeyboard = static_cast<OIS::Keyboard*>(mInputManager->createInputObject( OIS::OISKeyboard, false ));
 		mMouse = static_cast<OIS::Mouse*>(mInputManager->createInputObject( OIS::OISMouse, false ));
 
-		//
 		//Set initial mouse clipping size
 		windowResized(mWindow);
  
